@@ -1,10 +1,18 @@
+param (
+    # Parameter help description
+    [Parameter(Mandatory=$false)]
+    [String] $Param = "Input"
+)
+
 # these are ignored
 Write-Host "Host"
 Write-Information "Information"
 
-# output two different ways
+# output (two ways)
+# Long way
 $output = "Output"
 Write-Output -InputObject $output
+# Short way
 $output
 
 # logging of progress
