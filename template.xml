@@ -1,0 +1,20 @@
+<pnp:Provisioning
+    xmlns:pnp="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema https://raw.githubusercontent.com/OfficeDev/PnP-Provisioning-Schema/master/OfficeDevPnP.ProvisioningSchema/ProvisioningSchema-2018-07.xsd"
+                  Author="Garry Trinder"
+                  Generator="Human being"
+                  Version="1.0">
+    <pnp:Preferences Author="Garry Trinder" Version="1.0" Generator="Human being :-)"></pnp:Preferences>
+    <pnp:Templates ID="SAMPLE-TEMPLATES">
+        <pnp:ProvisioningTemplate ID="SPECIALTEAM" Version="1.0">
+            <pnp:Lists>
+                <pnp:ListInstance Title="My List"
+                    Description="My new list"
+                    OnQuickLaunch="true"
+                    TemplateType="100"
+                    Url="Lists/MyList"></pnp:ListInstance>
+            </pnp:Lists>
+        </pnp:ProvisioningTemplate>
+    </pnp:Templates>
+</pnp:Provisioning>
