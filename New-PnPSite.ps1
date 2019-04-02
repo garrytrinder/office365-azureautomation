@@ -1,7 +1,7 @@
 param
 (
     [Parameter(Mandatory=$true)]
-    [String] $Url,
+    [String] $Alias,
     [Parameter(Mandatory=$true)]
     [String] $Title
 )
@@ -13,7 +13,9 @@ $AppSecret = Get-AutomationVariable -Name 'SharePointAppSecret'
 $Connect = Connect-PnPOnline -AppId $AppId -AppSecret $AppSecret -Url $Url
 
 # create modern team site
-$Site = New-PnPSite -Type TeamSite -Title $Title -Url $Url -Wait
+$Site = New-PnPSite -Type TeamSite -Title $Title -Alias $Alias -Wait
+
+@{"Url" = $Site } | ConvertTo-Json -Compress
 
 # clean up SharePoint connection
 $Disconnect = Disconnect-PnPOnline
