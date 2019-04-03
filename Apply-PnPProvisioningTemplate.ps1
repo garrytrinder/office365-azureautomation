@@ -17,4 +17,4 @@ $AppSecret = Get-AutomationVariable -Name 'SharePointAppSecret'
 $Connect = Connect-PnPOnline -AppId $AppId -AppSecret $AppSecret -Url $SiteUrl
 
 # apply template
-$ApplyPnPProvisioningTemplate = Apply-PnPProvisioningTemplate -Path "$home\template.xml" -Wait
+$ApplyPnPProvisioningTemplate = Apply-PnPProvisioningTemplate -Path "$home\template.xml"
