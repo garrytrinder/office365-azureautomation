@@ -20,5 +20,3 @@ $Site = New-PnPSite -Type TeamSite -Title $Title -Alias $Alias
 
 # output site url as JSON
 @{"Url" = $Site } | ConvertTo-Json -Compress
-
-$Disconnect = Disconnect-PnPOnline

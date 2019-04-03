@@ -33,10 +33,7 @@ $blobs | ForEach-Object {
 }
 
 # create connection to SharePoint site
-Connect-PnPOnline -Url $SiteUrl -Credentials (Get-AutomationPSCredential -Name $CredentialName)
+$Connect = Connect-PnPOnline -Url $SiteUrl -Credentials (Get-AutomationPSCredential -Name $CredentialName)
 
 # apply template
-Apply-PnPProvisioningTemplate -Path "$home\$TemplateName"
-
-# clean up SharePoint connection
-Disconnect-PnPOnline
+$ApplyTemplate = Apply-PnPProvisioningTemplate -Path "$home\$TemplateName"

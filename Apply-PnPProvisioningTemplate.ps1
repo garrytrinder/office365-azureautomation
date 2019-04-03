@@ -18,6 +18,3 @@ $Connect = Connect-PnPOnline -AppId $AppId -AppSecret $AppSecret -Url $SiteUrl
 
 # apply template
 $ApplyPnPProvisioningTemplate = Apply-PnPProvisioningTemplate -Path "$home\template.xml" -Wait
-
-# clean up SharePoint connection
-$Disconnect = Dis-PnPOnline
