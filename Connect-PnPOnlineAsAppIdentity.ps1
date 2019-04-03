@@ -4,6 +4,8 @@ param
     [String] $Url
 )
 
+$ErrorActionPreference = "Stop"
+
 $AppId = Get-AutomationVariable -Name 'SharePointAppId'
 $AppSecret = Get-AutomationVariable -Name 'SharePointAppSecret'
 

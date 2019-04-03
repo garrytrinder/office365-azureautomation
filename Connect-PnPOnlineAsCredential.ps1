@@ -4,6 +4,8 @@ param
     [String] $Url
 )
 
+$ErrorActionPreference = "Stop"
+
 $Credential = Get-AutomationPSCredential -Name 'SharePoint Admin'
 
 $Connect = Connect-PnPOnline -Url $Url -Credentials $Credential
